@@ -1,25 +1,20 @@
 import React, { Component } from 'react'
-import { Context } from './Provider'
+
+import { connect } from '../store'
 import Aside from '../modules/molecules/Aside'
 
 class AsideContainer extends Component {
   render() {
     return (
-      <Context.Consumer>
-        {data => {
-          return (
             <Aside
               categories={
-                data.categories
+                root.categories
               }
-              tags={data.tags}
-              menus={data.menus}
+              tags={root.tags}
+              menus={root.menus}
             />
-          )
-        }}
-      </Context.Consumer>
     )
   }
 }
 
-export default AsideContainer
+export default connect(({ root }) => ({ root }))(AsideContainer)
