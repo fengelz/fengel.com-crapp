@@ -1,5 +1,5 @@
 .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33 {
-   background-color: crimson;
+    background-color: crimson;
    height: 3rem;
    width: 100%; 
    position: sticky;
@@ -21,6 +21,27 @@
         transform: rotate(180deg);
     }
    }
+   &:not(.aside) {
+       background-color: transparent;
+    &:before, &:after {
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+   }
+    &:before {
+        border-left: 0 solid transparent;
+        border-right: 40vw solid transparent;
+        border-top: 3rem solid crimson;
+    }
+    &:after {
+        right: 0;
+        border-left: 40vw solid transparent;
+        border-right: 0 solid transparent;
+        border-top: 3rem solid crimson;
+    }
+   }
+   
    @include media-breakpoint-up(lg) { 
        display: none;
     }

@@ -6337,7 +6337,7 @@ img {
   border-top: 0.75rem solid rgba(0, 0, 0, 0.2);
   border-right: 0.75rem solid rgba(0, 0, 0, 0.2);
   border-bottom: 0.75rem solid rgba(0, 0, 0, 0.2);
-  border-left: 0.75rem solid black;
+  border-left: 0.75rem solid crimson;
   transform: translateZ(0);
   animation: load8 600ms infinite linear;
   width: 4rem;
@@ -6471,17 +6471,35 @@ img {
     justify-content: flex-end; }
     .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33.close .atom-f6089643-9ab0-4a31-8a40-3ef172ec5a04 {
       transform: rotate(180deg); }
+  .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33:not(.aside) {
+    background-color: transparent; }
+    .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33:not(.aside):before, .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33:not(.aside):after {
+      content: '';
+      width: 50%;
+      height: 100%;
+      position: absolute; }
+    .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33:not(.aside):before {
+      border-left: 0 solid transparent;
+      border-right: 40vw solid transparent;
+      border-top: 3rem solid crimson; }
+    .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33:not(.aside):after {
+      right: 0;
+      border-left: 40vw solid transparent;
+      border-right: 0 solid transparent;
+      border-top: 3rem solid crimson; }
   @media (min-width: 992px) {
     .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33 {
       display: none; } }
 
 .mol-eb7f4bd8-d14e-4bc1-be67-341064cca113 {
   padding: 1.5rem;
+  padding-top: 4.5rem;
   background-color: crimson;
   color: white;
   position: sticky;
   text-align: center;
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+  margin-top: -3rem; }
   .mol-eb7f4bd8-d14e-4bc1-be67-341064cca113 h1 {
     font-size: 2.2rem; }
   .mol-eb7f4bd8-d14e-4bc1-be67-341064cca113:after {
