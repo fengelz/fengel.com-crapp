@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
 import Header from '../Header'
 
-class Aside extends PureComponent {
+class Aside extends React.PureComponent {
   render() {
     const { pathname } = this.props.location
     return (

@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Context } from './Provider'
 import Aside from '../components/molecules/Aside'
 
-class AsideContainer extends Component {
+class AsideContainer extends React.Component {
   render() {
     return (
       <Context.Consumer>

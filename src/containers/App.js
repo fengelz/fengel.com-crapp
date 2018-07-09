@@ -15,7 +15,7 @@ import '../styles/index.css'
 
 class App extends Component {
   render() {
-    const reload = () => window.location.reload();
+    const reload = () => window.location.reload()
     return (
       <Context.Consumer>
         {({ state }) => {

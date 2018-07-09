@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Posts from '../Posts'
 import Intro from '../../molecules/Intro'
 import { Helmet } from 'react-helmet'
 import renderHTML from 'react-render-html'
 
-class Taxonomy extends Component {
+class Taxonomy extends React.Component {
   render() {
     const { posts, h1, full } = this.props
     return (

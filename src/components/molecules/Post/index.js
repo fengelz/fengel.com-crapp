@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import moment from 'moment'
 import renderHTML from 'react-render-html'
 
 import Html from '../../atoms/Html'
 
-class Post extends PureComponent {
+class Post extends React.PureComponent {
   render() {
     const { post } = this.props
     return (

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Context } from './Provider'
 import { withRouter } from 'react-router-dom'
 
 class RoutingComponent extends React.Component {

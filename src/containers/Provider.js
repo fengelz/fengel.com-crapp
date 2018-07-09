@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import {
   fetchPages,
@@ -12,7 +12,7 @@ import Loader from '../components/atoms/Loader'
 
 const Context = React.createContext()
 
-class Provider extends Component {
+class Provider extends React.Component {
   constructor() {
     super()
 
