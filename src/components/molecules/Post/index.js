@@ -11,7 +11,7 @@ class Post extends React.PureComponent {
     return (
       <article className="mol-28055d40-87fd-4b8c-925d-c061f7d075d2">
         <Helmet>
-          <title>Sune Fengel | {renderHTML(post.title.rendered)}</title>
+          <title>Sune Fengel » {renderHTML(post.title.rendered)}</title>
         </Helmet>
         <h1>
           <Html content={post.title.rendered} />

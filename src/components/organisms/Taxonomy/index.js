@@ -11,7 +11,7 @@ class Taxonomy extends React.Component {
     return (
       <div className="org-ddb77b2f-e017-46fe-b6ca-ee1a210ced97">
         <Helmet>
-          <title>Sune Fengel | {renderHTML(h1)}</title>
+          <title>Sune Fengel » {renderHTML(h1)}</title>
         </Helmet>
         <Intro>
           <h1>{h1}</h1>
