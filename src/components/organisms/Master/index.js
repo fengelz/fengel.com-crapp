@@ -14,7 +14,11 @@ class Master extends React.Component {
             name="description"
             content="Hi. My name is Sune. This is my CRApp/Wordpress powered creative outlet of music and artsy fartsy shit."
           />
-          <title>Sune Fengel | Bitch and Peaces</title>
+          <meta
+            name="keywords"
+            content="sune fengel, sune, fengel, frontend, vault76"
+          />
+          <title>Sune Fengel » Home</title>
         </Helmet>
         {this.props.children}
       </main>

@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 
 import Html from '../../atoms/Html'
 
-class Posts extends Component {
+class Posts extends React.Component {
   render() {
     const { posts } = this.props
     if (posts === null) return null

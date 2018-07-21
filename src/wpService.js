@@ -13,8 +13,8 @@ const fetchRoot = () => {
   return request({
     uri: routes.uri,
   })
-    .then(response => JSON.parse(response))
-    .catch(err => {
+    .then((response) => JSON.parse(response))
+    .catch((err) => {
       console.log('Err', err)
     })
 }
@@ -23,8 +23,8 @@ const fetchPages = () => {
   return request({
     uri: routes.uri + routes.pages,
   })
-    .then(response => JSON.parse(response))
-    .catch(err => {
+    .then((response) => JSON.parse(response))
+    .catch((err) => {
       console.log('Err', err)
     })
 }
@@ -35,31 +35,31 @@ const fetchPosts = (taxonomy, id) => {
   return request({
     uri,
   })
-    .then(response => JSON.parse(response))
-    .catch(err => {
+    .then((response) => JSON.parse(response))
+    .catch((err) => {
       console.log('Err', err)
     })
 }
 
-const fetchPostById = id => {
+const fetchPostById = (id) => {
   const uri = `${routes.uri}${id}`
   return request({
     uri,
   })
-    .then(response => JSON.parse(response))
-    .catch(err => {
+    .then((response) => JSON.parse(response))
+    .catch((err) => {
       console.log('Err', err)
     })
 }
-const fetchPostBySlug = slug => {
+const fetchPostBySlug = (slug) => {
   const filter = slug ? `&slug=${slug}` : ''
   const uri = `${routes.uri}${routes.posts}${filter}`
   console.log(uri)
   return request({
     uri,
   })
-    .then(response => JSON.parse(response))
-    .catch(err => {
+    .then((response) => JSON.parse(response))
+    .catch((err) => {
       console.log('Err', err)
     })
 }
@@ -68,8 +68,8 @@ const fetchMenus = () => {
   return request({
     uri: routes.uri + routes.menus,
   })
-    .then(response => JSON.parse(response))
-    .catch(err => {
+    .then((response) => JSON.parse(response))
+    .catch((err) => {
       console.log('Err', err)
     })
 }
@@ -78,8 +78,8 @@ const fetchCategories = () => {
   return request({
     uri: routes.uri + routes.categories,
   })
-    .then(response => JSON.parse(response))
-    .catch(err => {
+    .then((response) => JSON.parse(response))
+    .catch((err) => {
       console.log('Err', err)
     })
 }
@@ -87,8 +87,8 @@ const fetchTags = () => {
   return request({
     uri: routes.uri + routes.tags,
   })
-    .then(response => JSON.parse(response))
-    .catch(err => {
+    .then((response) => JSON.parse(response))
+    .catch((err) => {
       console.log('Err', err)
     })
 }
