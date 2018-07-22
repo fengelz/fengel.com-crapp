@@ -1,48 +1,56 @@
 .mol-b684bb38-10a7-4f15-81fe-8e7d413b4d33 {
-    background-color: crimson;
-   height: 3rem;
-   width: 100%; 
-   position: sticky;
-   top: 0;
-   left: 0;
-   z-index: 10;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   .atom-f6089643-9ab0-4a31-8a40-3ef172ec5a04 {
-       color: white;
-       font-size: 2.5rem;
-       line-height: .75;
-   }
-   &.close {
-       opacity: 1;
-       justify-content: flex-end;
-    .atom-f6089643-9ab0-4a31-8a40-3ef172ec5a04 { 
-        transform: rotate(180deg);
+  align-items: center;
+  background-color: crimson;
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  left: 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  .atom-f6089643-9ab0-4a31-8a40-3ef172ec5a04 {
+    color: white;
+    font-size: 2.5rem;
+    line-height: .75;
+  }
+
+  &.close {
+    justify-content: flex-end;
+    opacity: 1;
+
+    .atom-f6089643-9ab0-4a31-8a40-3ef172ec5a04 {
+      transform: rotate(180deg);
     }
-   }
-   &:not(.aside) {
-       background-color: transparent;
-    &:before, &:after {
-        content: '';
-        width: 50%;
-        height: 100%;
-        position: absolute;
-   }
-    &:before {
-        border-left: 0 solid transparent;
-        border-right: 40vw solid transparent;
-        border-top: 3rem solid crimson;
+  }
+
+  &:not(.aside) {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 50%;
     }
-    &:after {
-        right: 0;
-        border-left: 40vw solid transparent;
-        border-right: 0 solid transparent;
-        border-top: 3rem solid crimson;
+
+    &::before {
+      border-left: 0 solid transparent;
+      border-right: 40vw solid transparent;
+      border-top: 3rem solid crimson;
     }
-   }
-   
-   @include media-breakpoint-up(lg) { 
-       display: none;
+
+    &::after {
+      border-left: 40vw solid transparent;
+      border-right: 0 solid transparent;
+      border-top: 3rem solid crimson;
+      right: 0;
     }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
 }

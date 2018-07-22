@@ -1,19 +1,26 @@
 .org-a9ca065c-a467-47bb-a252-2138bff1cb1d {
   padding: .75rem 1.5rem 6rem;
+
   h2 {
     margin-bottom: 1.5rem;
   }
+
   a {
     text-decoration: none;
   }
+
   time {
     color: crimson;
   }
-  .post:not(:last-child) {
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .post {
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+      margin-bottom: 1.5rem;
+      padding-bottom: .75rem;
+    }
   }
+
   @include media-breakpoint-up(lg) {
     width: auto;
   }

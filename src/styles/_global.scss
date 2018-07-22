@@ -1,37 +1,43 @@
 body,
 html {
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
+  background:
+  radial-gradient(#ddd 15%, transparent 16%) 0 0,
+  radial-gradient(#ddd 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color: #eee;
+  background-size: 16px 16px;
   color: #333;
   font-family: 'Nixie One', serif;
-  background:
-    radial-gradient(#ddd 15%, transparent 16%) 0 0,
-    radial-gradient(#ddd 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-  background-color:#eee;
-  background-size:16px 16px;
+  font-size: 14px;
+  height: 100%;
   line-height: 1.5;
-  height: 100%;
-}
-body {
-  box-shadow: inset 0 -5rem 6rem rgba(0, 0, 0, 0.1)
-}
-#root {
+  margin: 0;
   overflow: hidden;
-  height: 100%;
+  padding: 0;
 }
+
+body {
+  box-shadow: inset 0 -5rem 6rem rgba(0, 0, 0, .1)
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
 a {
   color: inherit;
-  transition: all 300ms ease-in;
   transform: translateX(0);
+  transition: all 300ms ease-in;
+
   &:hover {
-    opacity: 0.6;
     color: inherit;
+    opacity: .6;
     transform: translateX(.75rem);
   }
 }
+
 h1,
 h2,
 h3 {
@@ -39,10 +45,12 @@ h3 {
   letter-spacing: 2px;
   line-height: 1.5;
 }
+
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
+
 * {
   box-sizing: border-box;
 }

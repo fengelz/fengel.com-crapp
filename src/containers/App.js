@@ -8,7 +8,6 @@ import MasterContainer from './MasterContainer'
 import AsideContainer from './AsideContainer'
 import PostContainer from './PostContainer'
 import { Context } from './Provider'
-import Loader from '../components/atoms/Loader'
 import Header from '../components/molecules/Header'
 
 import '../styles/index.css'
@@ -22,7 +21,6 @@ class App extends Component {
           return (
             <Router>
               <MasterContainer {...state}>
-                <Loader />
                 <AsideContainer {...state} />
                 <section>
                   <Header {...state} char="+" />
