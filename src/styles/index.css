@@ -6528,6 +6528,9 @@ img {
   .mol-28055d40-87fd-4b8c-925d-c061f7d075d2 {
     min-width: auto; } }
 
+.org-8931390c-6aa9-4f38-a625-82028bf97d55::-webkit-scrollbar {
+  display: none; }
+
 .org-05396e7b-bd4b-4913-a46a-310f301f2b77 {
   height: 100%;
   margin-left: -70vw;
