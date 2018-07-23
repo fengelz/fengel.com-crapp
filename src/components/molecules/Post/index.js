@@ -4,6 +4,7 @@ import moment from 'moment'
 import renderHTML from 'react-render-html'
 
 import Html from '../../atoms/Html'
+import Intro from '../../molecules/Intro'
 
 class Post extends React.PureComponent {
   render() {
@@ -13,11 +14,19 @@ class Post extends React.PureComponent {
         <Helmet>
           <title>Sune Fengel » {renderHTML(post.title.rendered)}</title>
         </Helmet>
-        <h1>
-          <Html content={post.title.rendered} />
-        </h1>
-        <time>{moment(post.date).format('Do MMM YYYY')}</time>
-        <Html content={post.content.rendered} />
+        <Intro>
+          <h1>
+            <Html content={post.title.rendered} />
+          </h1>
+        </Intro>
+        <div className="content">
+          <p>
+            <strong>
+              <time>{moment(post.date).format('Do MMM YYYY')}</time> :
+            </strong>
+          </p>
+          <Html content={post.content.rendered} />
+        </div>
       </article>
     )
   }

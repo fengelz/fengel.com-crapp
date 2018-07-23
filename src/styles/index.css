@@ -6514,14 +6514,12 @@ img {
     position: absolute;
     width: 0; }
   @media (min-width: 992px) {
-    .mol-eb7f4bd8-d14e-4bc1-be67-341064cca113 {
-      margin-bottom: 9rem; }
-      .mol-eb7f4bd8-d14e-4bc1-be67-341064cca113::after {
-        border-left: 30vw solid transparent;
-        border-right: 30vw solid transparent;
-        border-top: 3rem solid crimson; } }
+    .mol-eb7f4bd8-d14e-4bc1-be67-341064cca113::after {
+      border-left: 30vw solid transparent;
+      border-right: 30vw solid transparent;
+      border-top: 3rem solid crimson; } }
 
-.mol-28055d40-87fd-4b8c-925d-c061f7d075d2 {
+.mol-28055d40-87fd-4b8c-925d-c061f7d075d2 .content {
   padding: .75rem 1.5rem; }
 
 @media (min-width: 992px) {
