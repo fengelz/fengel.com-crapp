@@ -13,6 +13,8 @@
     transform-origin: bottom left;
     transition: all 300ms ease-in;
     width: 100vw;
+    -webkit-overflow-scrolling: touch;
+    
 
     .atom-f6089643-9ab0-4a31-8a40-3ef172ec5a04 {
       opacity: 1;
