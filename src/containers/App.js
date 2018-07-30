@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import 'babel-polyfill'
 
 import HomeContainer from './HomeContainer'
+import NadaContainer from './NadaContainer'
 import TaxContainer from './TaxContainer'
 import MasterContainer from './MasterContainer'
 import AsideContainer from './AsideContainer'
@@ -33,7 +34,7 @@ class App extends Component {
                     <Route path="/wp-content/*" onEnter={reload} />
                     <Route path="/wp-include/*" onEnter={reload} />
                     <Route path="/wp-admin/*" onEnter={reload} />
-                    <Route component={HomeContainer} />
+                    <Route component={NadaContainer} />
                   </Switch>
                 </section>
               </MasterContainer>
