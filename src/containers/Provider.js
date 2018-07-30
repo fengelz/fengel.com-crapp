@@ -88,7 +88,9 @@ class Provider extends React.Component {
       })
       .then(fetchPosts)
       .then((response) => {
-        posts = response
+        posts = response.sort((x, y) => {
+          return x.sticky === y.sticky ? y.id - x.id : x.sticky ? -1 : 1
+        })
         this.setState({
           root,
           menus,

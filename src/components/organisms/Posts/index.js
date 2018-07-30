@@ -13,7 +13,9 @@ class Posts extends React.Component {
         {posts.map((post) => {
           moment.locale('DA')
           return (
-            <div className="post" key={post.id}>
+            <div
+              className={`post ${post.sticky ? 'sticky' : ''}`}
+              key={post.id}>
               <h2>
                 <Link to={`/${post.slug}`}>
                   <Html content={post.title.rendered} />
