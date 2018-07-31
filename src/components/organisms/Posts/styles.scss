@@ -6,9 +6,10 @@
       h2 {
         &::after {
           color: orange;
-          content: 'STICKY';
+          content: "STICKY";
           font-size: 1rem;
-          padding-left: 1rem;
+          margin-top: -1.5rem;
+          position: absolute;
           vertical-align: super;
         }
       }
