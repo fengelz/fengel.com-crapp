@@ -5,6 +5,7 @@
   width: 200vw;
 
   & > section {
+    -webkit-overflow-scrolling: touch;
     background-color: #fefefe;
     box-shadow: -1.5rem 0 3rem 1.5rem rgba(0, 0, 0, .5);
     height: calc(100vh - (100vh - 100%));
@@ -13,8 +14,6 @@
     transform-origin: bottom left;
     transition: all 300ms ease-in;
     width: 100vw;
-    -webkit-overflow-scrolling: touch;
-    
 
     .atom-f6089643-9ab0-4a31-8a40-3ef172ec5a04 {
       opacity: 1;
@@ -27,6 +26,7 @@
 
     & > section {
       background-color: #ccc;
+      overflow: hidden;
       transform: perspective(15rem) rotateY(15deg);
 
       .atom-f6089643-9ab0-4a31-8a40-3ef172ec5a04 {
