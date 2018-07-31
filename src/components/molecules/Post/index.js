@@ -20,7 +20,7 @@ class Post extends React.PureComponent {
           </h1>
         </Intro>
         <div className="content">
-          <p>
+          <p className={'published'}>
             <strong>
               <time>{moment(post.date).format('Do MMM YYYY')}</time> :
             </strong>

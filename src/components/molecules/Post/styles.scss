@@ -1,6 +1,21 @@
 .mol-28055d40-87fd-4b8c-925d-c061f7d075d2 {
   .content {
     padding: .75rem 1.5rem;
+
+    p {
+      &:not(.published) {
+        &:nth-child(2) {
+          &::first-letter {
+            color: crimson;
+            float: left;
+            font-size: 300%;
+            font-weight: 900;
+            letter-spacing: 5px;
+            line-height: 1;
+          }
+        }
+      }
+    }
   }
 }
 
