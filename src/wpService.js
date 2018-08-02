@@ -67,6 +67,15 @@ const fetchMenus = () => {
     })
 }
 
+const fetchMenu = (id) => {
+  return axios
+    .get(` ${routes.uri}${routes.menus}/${id}`)
+    .then((response) => response.data)
+    .catch((err) => {
+      console.log('Err', err)
+    })
+}
+
 const fetchCategories = () => {
   return axios
     .get(routes.uri + routes.categories)
@@ -89,6 +98,7 @@ export {
   fetchPages,
   fetchPosts,
   fetchMenus,
+  fetchMenu,
   fetchCategories,
   fetchTags,
   fetchPostById,

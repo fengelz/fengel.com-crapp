@@ -21,6 +21,22 @@ class Aside extends React.PureComponent {
             <li>
               <ul>
                 <li>
+                  <h3>Pages:</h3>
+                </li>
+                {this.props.menu.items.map((link) => {
+                  return (
+                    <li key={link.id}>
+                      <a target="blank" href={link.url}>
+                        {link.title}
+                      </a>
+                    </li>
+                  )
+                })}
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>
                   <h3>Categories:</h3>
                 </li>
                 {this.props.categories.map((cat) => {

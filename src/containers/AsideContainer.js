@@ -11,7 +11,7 @@ class AsideContainer extends React.Component {
             <Aside
               categories={state.categories}
               tags={state.tags}
-              menus={state.menus}
+              menu={state.menu}
               toggleMenu={state.toggleMenu}
             />
           )

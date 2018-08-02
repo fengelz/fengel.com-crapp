@@ -5,7 +5,7 @@ import {
   fetchPosts,
   fetchCategories,
   fetchTags,
-  fetchMenus,
+  fetchMenu,
 } from '../wpService.js'
 
 import Loader from '../components/atoms/Loader'
@@ -20,6 +20,7 @@ class Provider extends React.Component {
       root: {},
       pages: [],
       menus: [],
+      menu: {},
       categories: [],
       tags: [],
       cache: [],
@@ -67,9 +68,9 @@ class Provider extends React.Component {
   }
 
   componentDidMount() {
-    let { menus, categories, tags, pages, posts, root } = {}
-    fetchMenus()
-      .then((response) => (menus = response))
+    let { menu, categories, tags, pages, posts, root } = {}
+    fetchMenu(62)
+      .then((response) => (menu = response))
       // .then(fetchRoot)
       // .then((response) => {
       //   root = response
@@ -93,7 +94,7 @@ class Provider extends React.Component {
         })
         this.setState({
           root,
-          menus,
+          menu,
           categories,
           tags,
           pages,

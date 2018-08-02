@@ -31,9 +31,6 @@ class App extends Component {
                     <Route path="/tag/:slug" component={TaxContainer} />
                     <Route path="/category/:slug" component={TaxContainer} />
                     <Route path="/sitemap.xml" onEnter={reload} />
-                    <Route path="/wp-content/*" onEnter={reload} />
-                    <Route path="/wp-include/*" onEnter={reload} />
-                    <Route path="/wp-admin/*" onEnter={reload} />
                     <Route component={NadaContainer} />
                   </Switch>
                 </section>
