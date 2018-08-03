@@ -8,6 +8,11 @@
   width: 70vw;
   z-index: 20;
 
+  .swipe-area {
+    height: 100%;
+    overflow: hidden;
+  }
+
   nav {
     height: 100%;
     overflow-y: auto;

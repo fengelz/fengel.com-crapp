@@ -6,13 +6,20 @@
       h2 {
         &::after {
           color: orange;
-          content: "STICKY";
+          content: 'STICKY';
           font-size: 1rem;
+          left: 1.5rem;
           margin-top: -1.5rem;
           position: absolute;
           vertical-align: super;
         }
       }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+      margin-bottom: 1.5rem;
+      padding-bottom: .75rem;
     }
   }
 
@@ -26,14 +33,6 @@
 
   time {
     color: crimson;
-  }
-
-  .post {
-    &:not(:last-child) {
-      border-bottom: 1px solid rgba(0, 0, 0, .1);
-      margin-bottom: 1.5rem;
-      padding-bottom: .75rem;
-    }
   }
 
   @include media-breakpoint-up(lg) {

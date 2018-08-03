@@ -10,6 +10,7 @@ import AsideContainer from './AsideContainer'
 import PostContainer from './PostContainer'
 import { Context } from './Provider'
 import Header from '../components/molecules/Header'
+import SwipeArea from '../components/atoms/SwipeArea'
 
 import '../styles/index.css'
 
@@ -24,15 +25,21 @@ class App extends Component {
               <MasterContainer {...state}>
                 <AsideContainer {...state} />
                 <section>
-                  <Header {...state} char="+" />
-                  <Switch>
-                    <Route exact path="/" component={HomeContainer} />
-                    <Route exact path="/:postSlug" component={PostContainer} />
-                    <Route path="/tag/:slug" component={TaxContainer} />
-                    <Route path="/category/:slug" component={TaxContainer} />
-                    <Route path="/sitemap.xml" onEnter={reload} />
-                    <Route component={NadaContainer} />
-                  </Switch>
+                  <SwipeArea swipedRight={state.toggleMenu}>
+                    <Header {...state} char="+" />
+                    <Switch>
+                      <Route exact path="/" component={HomeContainer} />
+                      <Route
+                        exact
+                        path="/:postSlug"
+                        component={PostContainer}
+                      />
+                      <Route path="/tag/:slug" component={TaxContainer} />
+                      <Route path="/category/:slug" component={TaxContainer} />
+                      <Route path="/sitemap.xml" onEnter={reload} />
+                      <Route component={NadaContainer} />
+                    </Switch>
+                  </SwipeArea>
                 </section>
               </MasterContainer>
             </Router>
