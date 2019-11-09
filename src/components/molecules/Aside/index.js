@@ -26,11 +26,15 @@ class Aside extends React.PureComponent {
                     <h3>Pages:</h3>
                   </li>
                   {this.props.menu.items.map((link) => {
-                    return (
+                    return link.object === 'custom' ? (
                       <li key={link.id}>
                         <a target="blank" href={link.url}>
                           {link.title}
                         </a>
+                      </li>
+                    ) : (
+                      <li>
+                        <Link to={`/${link.object_slug}`}>{link.title}</Link>
                       </li>
                     )
                   })}

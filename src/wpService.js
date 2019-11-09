@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import axios from 'axios'
 
 const routes = {
@@ -10,6 +11,7 @@ const routes = {
 }
 
 const fetchRoot = () => {
+  console.log('fetch root')
   return axios
     .get(routes.uri)
     .then((response) => response.data)
@@ -33,26 +35,6 @@ const fetchPosts = (taxonomy, id) => {
   return axios
     .get(uri)
     .then((response) => response.data)
-    .catch((err) => {
-      console.log('Err', err)
-    })
-}
-
-const fetchPostById = (id) => {
-  const uri = `${routes.uri}${id}`
-  return axios
-    .get(uri)
-    .then((response) => response.data)
-    .catch((err) => {
-      console.log('Err', err)
-    })
-}
-const fetchPostBySlug = (slug) => {
-  const filter = slug ? `&slug=${slug}` : ''
-  const uri = `${routes.uri}${routes.posts}${filter}`
-  return axios
-    .get(uri)
-    .then((response) => JSON.parse(response))
     .catch((err) => {
       console.log('Err', err)
     })
@@ -101,6 +83,4 @@ export {
   fetchMenu,
   fetchCategories,
   fetchTags,
-  fetchPostById,
-  fetchPostBySlug,
 }

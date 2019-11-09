@@ -15,7 +15,6 @@ const Context = React.createContext()
 class Provider extends React.Component {
   constructor() {
     super()
-
     this.state = {
       root: {},
       pages: [],
@@ -55,7 +54,7 @@ class Provider extends React.Component {
       }
     }
     this.getPost = (slug) => {
-      return this.state.posts.find((post) => {
+      return this.state.posts.concat(this.state.pages).find((post) => {
         return post.slug === slug
       })
     }
